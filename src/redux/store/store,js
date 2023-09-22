@@ -1,0 +1,14 @@
+import { configureStore } from "@reduxjs/toolkit";
+import playerReducer from "../reducers/player";
+import favouriteSong from "../reducers/favorite";
+import searchReducer from "../reducers/search";
+
+const store = configureStore({
+  reducer: {
+    search: searchReducer,
+    player: playerReducer,
+    favourite: favouriteSong,
+  },
+});
+
+export default store;
